@@ -1,0 +1,18 @@
+nums = list(range(30,65,5))
+nums.append(65)
+print(nums[::-1])
+
+nums2 = list()
+for newnums in range(21):
+  nums2.append(newnums)
+print(nums2)
+sumnums2 = sum(nums2)
+print("Sum:", sumnums2)
+
+weatherlist = {"sunny":"play", "rainy":"watch TV", "cloudy":"walk"}
+for weather in weatherlist:
+  print("when", weather, "let us", weatherlist[weather])
+weatherlist.update({"snowy":"ski"})
+print("Updated sentence:")
+for weather in weatherlist:
+  print("when", weather, "let us", weatherlist[weather])
