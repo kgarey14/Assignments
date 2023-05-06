@@ -1,0 +1,59 @@
+#1
+
+
+class Human:
+  species = "Homo Sapiens"
+  eyes = 2
+  fingers = 10
+  toes = 10
+  legs = 2
+  language = "English"
+
+  def __init__(self, name, age, gender):
+    self.name = name
+    self.age = age
+    self.gender = gender
+  
+  def introduce(self):
+    print("Hello, I'm ", self.name, "I am", self.age, "years old. I identify as a", self.gender)
+
+A = Human("Cameron", 21, "Man")
+B = Human("Marianna", 19, "Non-binary Person")
+
+A.introduce()
+B.introduce()
+
+
+
+
+#2
+import math
+class Point:
+  def __init__(self):
+    self.x = 0
+    self.y = 0
+  def distance_to_origin(self):
+    distance = math.sqrt(self.x**2 + self.y**2)
+    return distance
+
+p = Point()
+p.x = 12
+p.y = 16
+
+distance = p.distance_to_origin()
+print(distance)
+
+
+
+
+#3
+A & D are correct
+
+#4
+'Hello World" is printed 
+
+#5
+(C) is the incorrect statement
+
+#6
+The code returns a Type Error ("Only integers are allowed")
