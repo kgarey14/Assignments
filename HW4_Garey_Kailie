@@ -1,0 +1,151 @@
+#1
+import numpy as np
+
+array_one = np.array([[1,2,3,4],
+                      [5,6,7,8],
+                      [9,10,11,12]])
+print(array_one)
+
+multiply_array = array_one * 2
+
+dimension = multiply_array.ndim
+print("The dimension of the multiplied array is: ", dimension)
+
+shape = multiply_array.shape
+print("The shape of the array is ", shape)
+
+for row in array_one:
+  for num in row:
+    print(num, " ", end='')
+  print()
+
+for num in array_one.flat:
+  print(num, "", end='')
+  
+  
+  
+  
+  
+  #2
+  import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([1,2,3,4,5,6])
+y = np.array([5,6,7,8,9,10])
+
+plt.plot(x,y)
+plt.show()
+
+x2 = np.array([3,6,9,12])
+y2 = np.array([2,8,1,10])
+
+plt.plot(x2, y2, marker='o')
+plt.scatter(x2, y2, c='red')
+
+plt.show()
+
+
+
+#3
+import matplotlib.pyplot as plt
+
+x3 = [0,1,2,3,4,5]
+y3 = [2,4,6,14,10,12]
+
+plt.plot(x3, y3, 'r--')
+
+plt.scatter(x3, y3, c='green', s=100)
+
+plt.show()
+
+
+
+#4
+import matplotlib.pyplot as plt
+
+line1_x = [0.0, 4.0]
+line1_y = [9.0, 12.5]
+
+line2_x = [0.0, 4.0]
+line2_y = [5.0, 9.0]
+
+line3_x = [0.0, 4.0]
+line3_y = [1.0, 5.0]
+
+plt.plot(line1_x, line1_y, 'g', label='Line 1')
+plt.plot(line2_x, line2_y, 'orange', label='Line 2')
+plt.plot(line3_x, line3_y, 'blue', label='Line 3')
+
+plt.xlabel('X Label')
+plt.ylabel('Y Label')
+
+plt.show()
+
+
+
+
+#5
+import matplotlib.pyplot as plt
+
+marks = {'Andy':88, 'Amy':66, 'James':90, 'Jules':55, 'Arthur':77}
+students = list(marks.keys())
+grades = list(marks.values())
+
+plt.bar(students, grades)
+plt.xlabel('Students')
+plt.ylabel('Grades')
+plt.title('Student Grades')
+plt
+import matplotlib.pyplot as plt
+
+marks = {'Andy':88, 'Amy':66, 'James':90, 'Jules':55, 'Arthur':77}
+students = list(marks.keys())
+grades = list(marks.values())
+
+
+plt.pie(grades, labels=students)
+plt.title('Student Grades')
+plt.legend()
+plt.show()
+
+
+
+
+#6
+import matplotlib.pyplot as plt
+import numpy as np
+fig, axs = plt.subplots(2,3,figsize=(12,8))
+
+x = np.linspace(0, 10, 100)
+axs[0,0].plot(x, np.sin(x), label='sin(x)')
+axs[0,0].plot(x, np.cos(x), label='cos(x)')
+axs[0,0].set_title('Line Plot')
+axs[0,0].legend()
+
+categories = ['A','B','C','D','E']
+values = [25, 32, 12, 45, 18]
+axs[0,1].bar(categories, values)
+axs[0,1].set_title('Bar Chart')
+
+labels = ['Apples', 'Banana', 'Oranges', 'Berries']
+sizes = [30,25,20,15]
+axs[0,2].pie(sizes, labels=labels)
+axs[0,2].set_title('Pie Chart')
+
+x = np.arange(1, 6)
+y = np.random.randint(1, 10, size=5)
+axs[1,0].grid(True)
+axs[1,0].scatter(x,y)
+axs[1,0].set_title('Grid Plot')
+
+x = np.random.randn(100)
+y = np.random.randn(100)
+axs[1,1].scatter(x,y)
+axs[1,1].set_title('Scatter Plot')
+
+data = np.random.normal(0,1,1000)
+axs[1,2].hist(data, bins=30)
+axs[1,2].set_title('Histogram Plot')
+
+plt.tight_layout()
+plt.show()
